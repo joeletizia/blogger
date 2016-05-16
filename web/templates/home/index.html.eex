@@ -31,4 +31,8 @@
       </li>
     </ul>
   </div>
+
+  <%= for post <- @posts do %>
+    <h2><%= post.title %></h2>
+  <% end %>
 </div>
