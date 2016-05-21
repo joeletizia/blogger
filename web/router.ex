@@ -17,6 +17,7 @@ defmodule Blogger.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", HomeController, :index
+    resources "/posts", PostController
   end
 
   # Other scopes may use custom stacks.

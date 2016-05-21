@@ -1,0 +1,15 @@
+<h1>
+  Write your new post!
+</h1>
+
+<%= form_for @changeset, post_path(@conn, :create), fn f -> %>
+  <div class="form-group">
+    <label for="post[title]">Title</label>
+    <%= text_input f, :title, class: "form-control" %>
+
+    <label for="post[content]">Content</label>
+    <%= textarea f, :text, class: "form-control", rows: 10 %>
+
+  </div>
+  <%= submit "Save", class: "btn btn-primary" %>
+<%= end %>
