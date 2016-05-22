@@ -3,8 +3,8 @@ defmodule Blogger.Repo.Migrations.CreatePost do
 
   def change do
     create table(:posts) do
-      add :title, :string
-      add :text, :string
+      add :title, :text
+      add :text, :text
 
       timestamps
     end

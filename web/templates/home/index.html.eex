@@ -8,7 +8,11 @@
 <%= for post <- @posts do %>
   <div class="row">
     <div class="col-sm-6">
-      <%= link post.title, to: post_path(@conn, :show, post) %>
+      <h3> <%= link post.title, to: post_path(@conn, :show, post) %> </h3>
+      <%= post.inserted_at %>
+      <p>
+        <%= MyString.truncate(post.text, 20) %>
+      </p>
     </div>
   </div>
 <% end %>
